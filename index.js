@@ -19,20 +19,17 @@ for (i=0;i<passLength;i++) {
 if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('lowercase').checked)){
    var newpass = charObj.lowerChars[Math.floor(Math.random()*charObj.lowerChars.length)];
     arr.push(newpass);
-    alert(arr);
 } else if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('uppercase').checked)){
     var newpass = charObj.upperChars[Math.floor(Math.random()*charObj.upperChars.length)];
     arr.push(newpass);
-    alert(arr);
 } else if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('numbers').checked)){
     var newpass = charObj.numbers[Math.floor(Math.random()*charObj.numbers.length)];
     arr.push(newpass);
-    alert(arr);
 } else if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('spec-char').checked)){
     var newpass = charObj.specialChar[Math.floor(Math.random()*charObj.specialChar.length)];
     arr.push(newpass);
-    alert(arr);
 } 
 }
+alert(arr.join(""));
 };
 
