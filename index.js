@@ -105,7 +105,7 @@ if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.ge
     var newpass = charObj.all[Math.floor(Math.random()*charObj.all.length)];
     arr.push(newpass);
 } 
-}
+} 
 alert(arr.join(""));
 };
 

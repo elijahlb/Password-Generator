@@ -7,13 +7,12 @@
         <title>Password Generator</title>
     </head>
     <body>
-
 <div class='jumbotron' id="jumboId">
     <div class='row m-5'>
         <div class='col-md-6'>
           <h1>Password Generator </h1>
           <br>
-          <h3>Seclect a length and your desired character type(s) below:</h3>
+          <h3>Select desired length and character type(s) below:</h3>
           <hr/>
         </div>
         <div id='fontawe'>
@@ -36,7 +35,7 @@
         <div class="btn-group">
             <label class="btn btn-default">           
             </label>
-            <label class="btn btn-default active">
+            <label class="btn btn-default active" id="lower">
                 Lower Case
             </label>
         </div>
@@ -46,7 +45,7 @@
         <div class="btn-group">
             <label class="btn btn-default">           
             </label>
-            <label class="btn btn-default active">
+            <label class="btn btn-default active" id="upper">
                 Upper Case
             </label>
         </div>
@@ -56,7 +55,7 @@
         <div class="btn-group">
             <label class="btn btn-default">           
             </label>
-            <label class="btn btn-default active">
+            <label class="btn btn-default active" id="num">
                 Numbers
             </label>
         </div>
@@ -66,7 +65,7 @@
         <div class="btn-group">
             <label class="btn btn-default">           
             </label>
-            <label class="btn btn-default active">
+            <label class="btn btn-default active" id="special">
                 Special Characters
             </label>
         </div>
@@ -80,6 +79,12 @@
     </div>    
 </div>
 </div>
+
+<footer id="sticky-footer" class="py-4">
+        <div class="container text-center">
+                Copyright &copy; Elijah Broaddus
+              </div>
+</footer>
         
            
 <script src="https://kit.fontawesome.com/76e73fc237.js" crossorigin="anonymous"></script>
