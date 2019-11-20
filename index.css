@@ -2,3 +2,8 @@
     background-color:rgb(40, 63, 90);
     color:white;
 }
+
+#submitbtn {
+    background-color: rgb(40, 63, 90);
+    border:none;
+}
