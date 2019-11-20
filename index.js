@@ -1,6 +1,9 @@
 
 
 function submitForm () {
+
+    // Container for all possible combinations:
+
     var charObj = {
     lowerChars : 'abcdefghijklmnopqrstuvwxyz',
     upperChars : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -16,7 +19,8 @@ function submitForm () {
     lowUpNums : 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     lowUpSpec : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()`{}[]|\/?~=-',
     lowSpecNum : 'abcdefghijklmnopqrstuvwxyz!@#$%^&*()`{}[]|\/?~=-0123456789',
-    all : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-'
+    upNumSpec : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-0123456789',
+    all : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-',
     }
     var arr = [];
     var passLength = document.getElementById('pass-length').value;
@@ -96,6 +100,11 @@ if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.ge
     && (document.getElementById('uppercase').checked == false)) {
     var newpass = charObj.lowSpecNum[Math.floor(Math.random()*charObj.lowSpecNum.length)];
     arr.push(newpass);
+} else if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('uppercase').checked) && 
+    (document.getElementById('spec-char').checked) && (document.getElementById('numbers').checked)
+    && (document.getElementById('lowercase').checked == false)) {
+    var newpass = charObj.upNumSpec[Math.floor(Math.random()*charObj.upNumSpec.length)];
+    arr.push(newpass);
 
 // CASE FOR ALL ----------------------------------------------------------------------------------------------------------
 
@@ -106,74 +115,7 @@ if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.ge
     arr.push(newpass);
 } 
 } 
-alert(arr.join(""));
+alert("PASSWORD: " + arr.join(""));
 };
-
-
-
-// lower number spec
-
-
-//     ----------ALTERNATE SOLUTIONS ----------------------------
-
-
-/*function submitForm () {
-var lowerObj = {
-    lower:'abcdefghijklmnopqrstuvwxyz',
-    checked: false
-}
-var upperObj = {
-    upper:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-    checked: false
-}
-var numberObj = {
-    number:'0123456789',
-    checked: false
-}
-var symbolObj = {
-    symbol:'!@#$%^&*()`{}[]|\/?~=-',
-    checked: false
-}
-
-var arr = [];
-var passLength = document.getElementById('pass-length').value;
-for (i=0;i<passLength;i++) {
-    if ((passLength <= 128 && 8 <= passLength && passLength != null) && 
-    (lowerObj.checked==true)); {
-        var newpass = lowerObj.lower[Math.floor(Math.random()*lowerObj.lower.length)]
-        arr.push(newpass);
-    }
-}
-alert(arr.join(""));
-}*/
-
-/*function submitForm() {
-    var passLength = document.getElementById('pass-length').value;
-    if(passLength <= 128 && 8 <= passLength && passLength != null) {
-        var charObj = [
-            {chars:'abcdefghijklmnopqrstuvwxyz', checked:false},
-            {chars : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', checked:false},
-            {chars : '0123456789', checked:false},
-            {chars : '!@#$%^&*()`{}[]|\/?~=-', checked:false}
-        ]
-
-        let checkboxElements = document.querySelectorAll(".form-group input");
-    
-        var arr = [];
-        let showPassword = false;
-    
-        for (let i = 0; i < charObj.length; i++) {
-            if(charObj[i].checked) {
-                charObj[i].checked = checkboxElements[i].checked;
-                arr.push(charObj[i].chars)
-            }
-        }
-    }
-
-    // var newpass = cha[Math.floor(Math.random()*lowerObj.lower.length)]
-    // arr.push(newpass);
-
-};*/
-
 
 

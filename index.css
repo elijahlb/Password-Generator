@@ -1,3 +1,4 @@
+/* JUMBOTRON*/
 #jumboId {
     background-color:rgb(40, 63, 90);
     color:white;
@@ -5,23 +6,21 @@
     border-bottom: solid 5px rgb(190, 190, 22);
     font-family: 'Jura', sans-serif;
 }
-
-#submitbtn {
-    background-color: rgb(40, 63, 90);
-    border: solid rgb(190, 190, 22);
-}
-
 #fontawe {
     position:relative;
     float:right;
     width:33%;
     text-align:center;
-    font-size:70px;
+    font-size:80px;
     color:rgb(190, 190, 22);
 }
+/* END JUMBOTRON*/
 
-#rightbox {
-    float:right;
+
+
+#submitbtn {
+    background-color: rgb(40, 63, 90);
+    border: solid rgb(190, 190, 22);
 }
 
 footer {
@@ -31,8 +30,23 @@ footer {
     color:white;
 }
 
+
+/* MEDIA QUERIES*/
 @media only screen and (max-width: 640px) {
 #rightbox {
     padding:10px;
 }
+
+#fontawe {
+    font-size:60px;
 }
+}
+
+
+
+/*FOR COMMENTED OUT HTML CODE*/
+
+
+/*#rightbox {
+    float:right;
+}*/
