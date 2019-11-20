@@ -93,7 +93,7 @@ if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.ge
     arr.push(newpass);
 } else if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.getElementById('lowercase').checked) && 
     (document.getElementById('spec-char').checked) && (document.getElementById('numbers').checked)
-    && (document.getElementById('spec-char').checked == false)) {
+    && (document.getElementById('uppercase').checked == false)) {
     var newpass = charObj.lowSpecNum[Math.floor(Math.random()*charObj.lowSpecNum.length)];
     arr.push(newpass);
 
