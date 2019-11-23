@@ -1,5 +1,3 @@
-
-
 function submitForm () {
 
     // Container for all possible combinations:
@@ -20,7 +18,7 @@ function submitForm () {
     lowUpSpec : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()`{}[]|\/?~=-',
     lowSpecNum : 'abcdefghijklmnopqrstuvwxyz!@#$%^&*()`{}[]|\/?~=-0123456789',
     upNumSpec : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-0123456789',
-    all : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-',
+    all : 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()`{}[]|\/?~=-'
     }
     var arr = [];
     var passLength = document.getElementById('pass-length').value;
@@ -112,10 +110,8 @@ if ((passLength <= 128 && 8 <= passLength && passLength != null) && (document.ge
     (document.getElementById('uppercase').checked) && (document.getElementById('numbers').checked) 
     && (document.getElementById('spec-char').checked) ) {
     var newpass = charObj.all[Math.floor(Math.random()*charObj.all.length)];
-    arr.push(newpass);
+    arr.push(newpass); 
 } 
 } 
 alert("PASSWORD: " + arr.join(""));
 };
-
-
