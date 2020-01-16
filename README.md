@@ -6,6 +6,8 @@
 ​
 ## Description
 
+<img width="993" alt="Screen Shot 2020-01-15 at 11 44 57 PM" src="https://user-images.githubusercontent.com/50716060/72494176-165c1180-37f1-11ea-9077-ab84fcc95101.png">
+
 This password generator allows users to randomly select a secure password at the push of a button. 
 
 ##Features
